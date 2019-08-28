@@ -81,7 +81,7 @@ export class Person extends Component {
             City: this.state.formControls.city,
             State: this.state.formControls.state,
             ZipCode: this.state.formControls.zipCode,
-            Photograph: this.state.formControls.photograph
+            Photograph: this.state.reader.result;
         };
 
         if (this.state.method === 'PUT') {
@@ -115,7 +115,7 @@ export class Person extends Component {
             <form onSubmit={this.handleSubmit}>
                 {this.renderRedirect()}
                 <div class='form-group'>
-                    <label>First Name:</label>
+                    <label>First Name (Required):</label>
                     <input type="text"
                         class="form-control"
                         name='firstName'
@@ -125,7 +125,7 @@ export class Person extends Component {
                     />
                 </div>
                 <div class='form-group'>
-                    <label>Last Name:</label>
+                    <label>Last Name (Required):</label>
                     <input type="text"
                         class="form-control"
                         name='lastName'
@@ -135,7 +135,7 @@ export class Person extends Component {
                     />
                 </div>
                 <div class='form-group'>
-                    <label>Age:</label>
+                    <label>Age (Required):</label>
                     <input type="number"
                         class="form-control"
                         name='age'
@@ -145,7 +145,7 @@ export class Person extends Component {
                     />
                 </div>
                 <div class='form-group'>
-                    <label>Street Address:</label>
+                    <label>Street Address (Required):</label>
                     <input type="text"
                         class="form-control"
                         name='streetAddress'
@@ -155,7 +155,7 @@ export class Person extends Component {
                     />
                 </div>
                 <div class='form-group'>
-                    <label>City:</label>
+                    <label>City (Required):</label>
                     <input type="text"
                         class="form-control"
                         name='city'
@@ -165,7 +165,7 @@ export class Person extends Component {
                     />
                 </div>
                 <div class='form-group'>
-                    <label>State:</label>
+                    <label>State (Required):</label>
                     <input type="text"
                         class="form-control"
                         name='state'
@@ -175,7 +175,7 @@ export class Person extends Component {
                     />
                 </div>
                 <div class='form-group'>
-                    <label>Zip Code:</label>
+                    <label>Zip Code (Required):</label>
                     <input type="number"
                         class="form-control"
                         name='zipCode'
