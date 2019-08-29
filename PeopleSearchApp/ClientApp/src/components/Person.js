@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom'
 
 export class Person extends Component {
     constructor(props) {
-        super(props);
+        super(props)
 
         this.state = {
             method: 'POST',
@@ -39,17 +39,12 @@ export class Person extends Component {
                             city: data.city,
                             state: data.state,
                             zipCode: data.zipCode,
-                            photograph: data.photoGraph
+                            photograph: data.photograph
                         },
                         redirect: false,
                         reader: new FileReader()
                     })
             );
-        }
-
-        let self = this;
-        this.state.reader.onloadend = function (event) {
-            self.setState({ photograph: event.target.result.split(',')[1] });
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -80,9 +75,14 @@ export class Person extends Component {
             StreetAddress: this.state.formControls.streetAddress,
             City: this.state.formControls.city,
             State: this.state.formControls.state,
-            ZipCode: this.state.formControls.zipCode,
-            Photograph: this.state.reader.result;
+            ZipCode: this.state.formControls.zipCode
         };
+
+        if (this.state.reader.result !== undefined && this.state.reader.result !== null) {
+            body.Photograph = this.state.reader.result.split(',')[1];
+        } else {
+            body.Photograph = this.state.photograph;
+        }
 
         if (this.state.method === 'PUT') {
             body.Id = this.state.formControls.id;

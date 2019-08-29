@@ -6,9 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using PeopleSearchApp.DataAccessLayer.DBContexts;
-using System.IO;
-using PeopleSearchApp.DataAccessLayer.Models;
-using System;
 using PeopleSearchApp.DataAccessLayer.Initializers;
 
 namespace PeopleSearchApp
@@ -52,17 +49,6 @@ namespace PeopleSearchApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 

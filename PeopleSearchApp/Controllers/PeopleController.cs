@@ -91,7 +91,7 @@ namespace CodingAssignment.Controllers
                 }
             }
 
-            return NoContent();
+            return Ok(person);
         }
 
         // POST: api/People
@@ -106,7 +106,7 @@ namespace CodingAssignment.Controllers
             peopleContext.People.Add(person);
             await peopleContext.SaveChangesAsync();
 
-            return CreatedAtAction("GetPerson", new { id = person.Id }, person);
+            return Ok(person);
         }
 
         // DELETE: api/People/n
@@ -127,7 +127,7 @@ namespace CodingAssignment.Controllers
             peopleContext.People.Remove(person);
             await peopleContext.SaveChangesAsync();
 
-            return Ok(person);
+            return Ok(string.Format("{0} has been deleted", person.FirstName));
         }
 
         private bool PersonExists(int id)

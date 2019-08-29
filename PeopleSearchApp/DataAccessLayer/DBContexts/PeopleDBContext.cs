@@ -1,8 +1,5 @@
 ﻿using PeopleSearchApp.DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.IO;
-using System.Linq;
 
 namespace PeopleSearchApp.DataAccessLayer.DBContexts
 {

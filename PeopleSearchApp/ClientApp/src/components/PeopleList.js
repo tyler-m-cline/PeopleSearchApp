@@ -80,6 +80,11 @@ export class PeopleList extends Component {
         return image;
     }
 
+    createImageTag(imageBinary) {
+        if (imageBinary !== undefined && imageBinary !== '' && imageBinary !== null) 
+            return (<img class="img" id='personImage' src={`data:image/jpg;base64,${imageBinary}`} />);
+    }
+
     //Rendering mechanisms 
     renderPeopleTable(state) {
         return (
@@ -87,6 +92,7 @@ export class PeopleList extends Component {
                 <thead>
                     <tr>
                         <th hidden={true}>Id</th>
+                        <th>Picture</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Age</th>
@@ -99,8 +105,8 @@ export class PeopleList extends Component {
                     {
                         state.people.map(person =>
                             <tr key={person.firstName}>
-                                <td hidden={true} id="peronId">{person.id}</td>
-                                <td><img class="img" id='personImage' src={`data:image/jpg;base64,${person.photograph}`} /> {person.firstName}</td>
+                                <td>{this.createImageTag(person.photograph)}</td>
+                                <td>{person.firstName}</td>
                                 <td>{person.lastName}</td>
                                 <td>{person.age}</td>
                                 <td>{person.streetAddress + ', ' + person.city + ', ' + person.state + ' ' + person.zipCode}</td>

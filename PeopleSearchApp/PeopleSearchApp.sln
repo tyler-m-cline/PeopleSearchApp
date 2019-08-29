@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleSearchApp", "PeopleSearchApp\PeopleSearchApp.csproj", "{C55D28EE-70AF-4957-9568-F1F472BB166A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSearchAppTest", "PeopleSearchAppTest\PeopleSearchAppTest.csproj", "{57C2F050-B29D-4C9D-A4A8-3FF4CC883C5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSearchAppTest", "PeopleSearchAppTest\PeopleSearchAppTest.csproj", "{DF9377F6-BD9B-478A-AE76-D36F7A659E4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C55D28EE-70AF-4957-9568-F1F472BB166A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C55D28EE-70AF-4957-9568-F1F472BB166A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C55D28EE-70AF-4957-9568-F1F472BB166A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57C2F050-B29D-4C9D-A4A8-3FF4CC883C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57C2F050-B29D-4C9D-A4A8-3FF4CC883C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57C2F050-B29D-4C9D-A4A8-3FF4CC883C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57C2F050-B29D-4C9D-A4A8-3FF4CC883C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF9377F6-BD9B-478A-AE76-D36F7A659E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9377F6-BD9B-478A-AE76-D36F7A659E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9377F6-BD9B-478A-AE76-D36F7A659E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9377F6-BD9B-478A-AE76-D36F7A659E4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
